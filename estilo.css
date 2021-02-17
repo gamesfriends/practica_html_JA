@@ -1,0 +1,124 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background: lightgrey;
+    text-align: center;
+}
+
+header{
+    background: black;
+    color: white;
+    height: 5em;
+    line-height: 5em;
+}
+
+#menu-movil{
+    display:none;
+    direction: column;
+}
+
+nav{
+    background: yellow;
+    min-height: 1.5em;
+    line-height: 1.5em;
+}
+
+#resolucion_baja{
+    display: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content:space-around; 
+}
+
+nav ul li:hover{
+    background-color:yellowgreen;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Reggae One', cursive;
+    color:black;
+    
+}
+
+nav ul li a:hover{
+    color:white;
+    text-shadow: 2px 2px 2px black;
+}
+
+#flex-container-principal{
+    display: flex;
+    flex-direction: row;
+    min-height: 500px;
+}
+
+#barra-lateral{
+    order:2;
+    width: 20%;
+    background: red;
+}
+
+#flex-content{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items:center;
+    width:80%;
+    background: green;
+    
+}
+
+#flex-content div{
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background: white;
+}
+
+footer{
+    background: orange;
+    
+}
+
+@media (max-width:600px){
+    #flex-container-principal{
+        flex-direction: column;
+    }
+    
+    #flex-content{
+        width: 100%;
+    }
+    
+    nav{
+        height:1.5em;
+    }
+    
+    #barra-lateral{
+    order:1;
+        height:4em;
+    width: 100%;
+    background: red;
+}
+    
+    
+    #resolucion_alta{
+        flex-direction: column;
+    }
+    
+    nav:hover{
+        height:8em;
+        
+    }
+
+     
+    
+   
+    
+}
