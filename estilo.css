@@ -1,14 +1,17 @@
 body{
     background: lightgrey;
     text-align: center;
-    
+    display:flex;
+    flex-direction: column;
+    width:95%;
+    margin:0 auto;
 }
 
 header{
     background: black;
     color: white;
     height: 7vh;
-    line-height: 7vh;
+    line-height: 3vh;
 }
 
 #menu-movil{
@@ -17,9 +20,12 @@ header{
 }
 
 nav{
-    background: yellow;
-    min-height: 1.5em;
-    line-height: 1.5em;
+    margin:.3em 0;
+    background: #ff847c;
+    font-size: 1rem;
+    min-height: 2em;
+    line-height: 2em;
+    border-radius: 1em;
 }
 
 #resolucion_baja{
@@ -31,22 +37,18 @@ nav ul{
     justify-content:space-around; 
 }
 
-nav ul li:hover{
-    background-color:yellowgreen;
-}
-
 
 nav ul li a{
     text-decoration: none;
     font-family: 'Reggae One', cursive;
-    color:black;
+    color: #2a363b;
     
 }
 
-nav ul li a:hover{
+/*nav ul li a:hover{
     color:white;
     text-shadow: 2px 2px 2px black;
-}
+}*/
 
 #flex-container-principal{
     display: flex;
@@ -55,12 +57,16 @@ nav ul li a:hover{
 }
 
 #barra-lateral{
+    border-radius: 1em;
+    margin-left:.5em;    
     order:2;
     width: 20%;
     background: red;
 }
 
 #flex-content{
+    padding:.4em;
+    border-radius: 1em;
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -72,6 +78,7 @@ nav ul li a:hover{
 }
 
 #flex-content div{
+    border-radius: 1em;
     margin: 5px;
     height: 100px;
     width: 100px;
@@ -79,8 +86,44 @@ nav ul li a:hover{
 }
 
 footer{
+    margin-top:.2em;
     background: orange;
+    border-radius: 1em;
+    text-transform: uppercase;
     
+}
+
+.main-menu__item {
+    position: relative;
+    cursor: pointer;
+    
+    overflow: hidden;
+}
+
+.main-menu__item::before,
+.main-menu__item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #2a363b;
+    transition: transform 0.5s;
+}
+
+.main-menu__item::before {
+    top: 5px;
+    transform: translateX(-100%);
+}
+
+.main-menu__item::after {
+    bottom: 5px;
+    transform: translateX(100%);
+}
+
+.main-menu__item:hover:before,
+.main-menu__item:hover:after {
+    transform: translateX(0);
 }
 
 @media (max-width:600px){
@@ -92,8 +135,25 @@ footer{
         width: 100%;
     }
     
+    .main-menu__item{
+    
+        }
+    
+    #barra-lateral{
+        margin:.2em 0 0;
+    }
+    
     nav{
         height:1.5em;
+        overflow: hidden;
+        
+    }
+    
+    nav ul li{
+        display: block;
+        width:20%;
+        margin: 0 auto;
+                    
     }
     
     #barra-lateral{
@@ -109,7 +169,8 @@ footer{
     }
     
     nav:hover{
-        height:8em;
+        height:11em;
+        position: static;
         
     }
 
