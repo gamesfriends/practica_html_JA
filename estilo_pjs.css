@@ -1,0 +1,144 @@
+body{
+    background: radial-gradient(circle, #68150a, #1b0301);
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header{
+    background: black;
+    color: white;
+    height: 7vh;
+    line-height: 7vh;
+}
+
+#menu-movil{
+    display:none;
+    direction: column;
+}
+
+nav{
+    background: yellow;
+    min-height: 1.5em;
+    line-height: 1.5em;
+}
+
+.menu-item {
+    padding: 1em;
+}
+
+#resolucion_baja{
+    display: none;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content:space-around; 
+}
+
+nav ul li:hover{
+    background-color:yellowgreen;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Reggae One', cursive;
+    color:black;
+    
+}
+
+nav ul li a:hover{
+    color:white;
+    text-shadow: 2px 2px 2px black;
+}
+
+#flex-container-principal{
+    display: flex;
+    flex-direction: row;
+    min-height: 500px;
+}
+
+#barra-lateral{
+    order:2;
+    width: 20%;
+    background: red;
+    padding-top: 10px;
+}
+
+.lat-boton {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    background-color: #68150a;
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+.lat-boton:hover {
+    color: #68150a;
+    background-color: aliceblue;
+}
+
+#flex-content{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items:center;
+    width:80%;
+    background: green;
+    
+}
+
+#flex-content div{
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    background: white;
+}
+
+footer{
+    background: orange;
+    text-transform: uppercase;
+    margin-top: auto;
+    padding: 1.5em;
+}
+
+@media (max-width:600px) {
+    #flex-container-principal{
+        /* flex-direction: column; */
+    }
+    
+    #flex-content{
+        width: 100%;
+    }
+    
+    nav{
+        height:1.5em;
+    }
+    
+    #barra-lateral{
+    order:1;
+        height:4em;
+    width: 100%;
+    background: red;
+    }
+    
+    
+    #resolucion_alta{
+        flex-direction: column;
+    }
+    
+    nav:hover{
+        height:8em;
+        
+    }
+}
